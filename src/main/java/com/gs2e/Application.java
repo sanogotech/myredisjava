@@ -16,7 +16,7 @@ public class Application
 	
 	 public static void main( String[] args )
     {
-		System.out.println( "Hello World!" );
+	System.out.println( "Hello World!" );
         Config config = new Config();
         // use single Redis server
         config.useSingleServer().setAddress("redis://127.0.0.1:6379");
@@ -28,7 +28,9 @@ public class Application
         map.put("mapKey", "This is map value");
         String objectValue = bucket.get();
         System.out.println("stored object value: " + objectValue);
+	long startime = System.currentTimeMillis();
         String mapValue = map.get("mapKey");
+	System.out.println("Total Time seconds to map.get :"  + ((System.currentTimeMillis() - startime)/1000));
         System.out.println("stored map value: " + mapValue);
         redisson.shutdown();
     }
