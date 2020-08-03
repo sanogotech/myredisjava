@@ -7,7 +7,7 @@ import org.redisson.api.RedissonClient;
 import org.redisson.api.RMap;
 
 /**
- * Hello world!
+ * Redis Sample !
  *
  */
 public class Application 
@@ -25,7 +25,7 @@ public class Application
         RBucket<String> bucket = redisson.getBucket("simpleObject");
         bucket.set("This is object value");
         RMap<String, String> map = redisson.getMap("simpleMap");
-        map.put("mapKey", "This is map value");
+        map.put("mapKey", "This is map value in action");
         String objectValue = bucket.get();
         System.out.println("stored object value: " + objectValue);
 	long startime = System.currentTimeMillis();
