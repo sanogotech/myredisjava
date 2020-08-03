@@ -30,7 +30,7 @@ public class Application
         System.out.println("stored object value: " + objectValue);
 	long startime = System.currentTimeMillis();
         String mapValue = map.get("mapKey");
-	System.out.println("Total Time seconds to map.get :"  + ((System.currentTimeMillis() - startime)/1000));
+	System.out.println("Total Time ms to map.get :"  + (System.currentTimeMillis() - startime));
         System.out.println("stored map value: " + mapValue);
         redisson.shutdown();
     }
